@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tripleten Profile Image Grid" />
+    <meta name="author" content="Rodolfo España" />
+    <meta name="keywords" content="html, css, JS" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="icon" href="./favicon_circles.ico" />
+    <title>Around the US</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img
+          class="title__logo"
+          src="./images/titleAroundVector.png"
+          alt="Page title logo"
+        />
+      </header>
+      <main class="main">
+        <section class="grid__profile">
+          <img
+            class="profile__picture"
+            src="./images/JacquesPP.png"
+            alt="Profile picture"
+          />
+          <div class="profile__information">
+            <p class="profile__name">Jacques Cousteau</p>
+            <p class="profile__about">Explorador</p>
+            <button class="profile__button profile__edit-button" type="button">
+              🖌
+            </button>
+          </div>
+          <button class="profile__plus-button" type="button">🞣</button>
+        </section>
+        <div class="popup popup__visible">
+          <form class="popup__container">
+            <div class="popup__header">
+              <h1 class="popup__title">Editar perfil</h1>
+              <button class="popup__close-button">🞩</button>
+            </div>
+            <!-- <label class="popup__name" for="Nombre">Nombre</label> -->
+            <input
+              type="text"
+              class="popup__input"
+              name="inputname"
+              id="inputname"
+              placeholder="Nombre"
+            />
+            <!-- <label class="popup__about" for="Acerca de mí">Acerca de mí</label> -->
+            <input
+              type="text"
+              class="popup__input"
+              name="inputabout"
+              id="inputabout"
+              placeholder="Acerca de mí"
+            />
+            <button class="popup__button">Guardar</button>
+          </form>
+        </div>
+        <section class="grid__gallery">
+          <div class="grid__item">
+            <img
+              src="./images/valleDeYosemite.jpg"
+              alt="Valle De Yosemite"
+              class="grid__image"
+            />
+            <div class="caption__arrange">
+              <p class="grid__caption">Valle De Yosemite</p>
+              <button class="grid__likebutton">
+                <img src="./images/heartVector.png" alt="heart button" />
+              </button>
+            </div>
+          </div>
+          <div class="grid__item">
+            <img
+              src="./images/lagoLouise.png"
+              alt="Lago Louise"
+              class="grid__image"
+            />
+            <div class="caption__arrange">
+              <p class="grid__caption">Lago Louise</p>
+              <button class="grid__likebutton">
+                <img src="./images/heartVector.png" alt="heart button" />
+              </button>
+            </div>
+          </div>
+          <div class="grid__item">
+            <img
+              src="./images/montañasCalvas.png"
+              alt="Montañas Calvas"
+              class="grid__image"
+            />
+            <div class="caption__arrange">
+              <p class="grid__caption">Montañas Calvas</p>
+              <button class="grid__likebutton">
+                <img src="./images/heartVector.png" alt="heart button" />
+              </button>
+            </div>
+          </div>
+          <div class="grid__item">
+            <img src="./images/latemar.png" alt="Latemar" class="grid__image" />
+            <div class="caption__arrange">
+              <p class="grid__caption">Latemar</p>
+              <button class="grid__likebutton">
+                <img src="./images/heartVector.png" alt="heart button" />
+              </button>
+            </div>
+          </div>
+          <div class="grid__item">
+            <img
+              src="./images/vanoisNationalP.png"
+              alt="Vanois National"
+              class="grid__image"
+            />
+            <div class="caption__arrange">
+              <p class="grid__caption">Vanois National Park</p>
+              <button class="grid__likebutton">
+                <img src="./images/heartVector.png" alt="heart button" />
+              </button>
+            </div>
+          </div>
+          <div class="grid__item">
+            <img
+              src="./images/lagoDiBraies.png"
+              alt="Lago di Braies"
+              class="grid__image"
+            />
+            <div class="caption__arrange">
+              <p class="grid__caption">Lago di Braies</p>
+              <button class="grid__likebutton">
+                <img src="./images/heartVector.png" alt="heart button" />
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">© 2025. Rodolfo España</p>
+      </footer>
+    </div>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
