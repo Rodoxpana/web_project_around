@@ -1,4 +1,4 @@
-.grid__gallery {
+.grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   max-width: 880px;
@@ -25,7 +25,7 @@
   border-top-right-radius: 10px;
 }
 
-.caption__arrange {
+.grid__caption-arrange {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -48,7 +48,7 @@
 }
 
 @media screen and (min-width: 630px) and (max-width: 1024px) {
-  .grid__gallery {
+  .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 620px;
@@ -64,7 +64,7 @@
 }
 
 @media screen and (min-width: 288px) and (max-width: 630px) {
-  .grid__gallery {
+  .grid {
     display: grid;
     grid-template-columns: 1fr;
     max-width: 620px;
