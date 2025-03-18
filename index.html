@@ -20,7 +20,7 @@
         />
       </header>
       <main class="main">
-        <section class="profile__grid">
+        <section class="profile">
           <img
             class="profile__picture"
             src="./images/JacquesPP.png"
@@ -35,12 +35,10 @@
           </div>
           <button class="profile__plus-button" type="button">🞣</button>
         </section>
-        <div class="popup popup__visible">
+        <div class="popup">
           <form class="popup__container">
-            <div class="popup__header">
-              <h1 class="popup__title">Editar perfil</h1>
-              <button class="popup__close-button">🞩</button>
-            </div>
+            <button class="popup__close-button" type="button">🞩</button>
+            <h1 class="popup__title">Editar perfil</h1>
             <!-- <label class="popup__name" for="Nombre">Nombre</label> -->
             <input
               type="text"
@@ -57,7 +55,7 @@
               id="inputabout"
               placeholder="Acerca de mí"
             />
-            <button class="popup__button">Guardar</button>
+            <button class="popup__save">Guardar</button>
           </form>
         </div>
         <section class="grid">

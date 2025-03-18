@@ -1,18 +1,22 @@
+const popUp = document.querySelector(".popup");
 const editButton = document.querySelector(".profile__edit-button");
-const popup = document.querySelector(".popup");
+const closeButton = document.querySelector(".popup__close-button");
 const inputName = document.querySelector("#inputname");
 const inputAbout = document.querySelector("#inputabout");
 const profileName = document.querySelector(".profile__name");
 const profileAbout = document.querySelector(".profile__about");
-const popUpButton = document.querySelector(".popup__button");
+const popUpSave = document.querySelector(".popup__save");
 
 editButton.addEventListener("click", () => {
-  popup.classList.toggle("popup__visible");
+  popUp.classList.toggle("popup__visible");
+});
+closeButton.addEventListener("click", () => {
+  popUp.classList.toggle("popup__visible");
 });
 
-popUpButton.addEventListener("click", (e) => {
+popUpSave.addEventListener("click", (e) => {
   e.preventDefault();
   profileName.textContent = inputName.value;
   profileAbout.textContent = inputAbout.value;
-  popup.classList.toggle("popup__visible");
+  popUp.classList.toggle("popup__visible");
 });

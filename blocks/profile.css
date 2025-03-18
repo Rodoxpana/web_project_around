@@ -1,4 +1,4 @@
-.profile__grid {
+.profile {
   display: grid;
   grid-template-columns: 120px 2fr 150px;
   grid-template-rows: 1fr;
@@ -72,7 +72,7 @@
 }
 
 @media screen and (min-width: 630px) and (max-width: 1024px) {
-  .profile__grid {
+  .profile {
     display: grid;
     grid-template-columns: 120px 1fr 120px;
     grid-template-rows: 1fr;
@@ -120,7 +120,7 @@
 }
 
 @media screen and (min-width: 288px) and (max-width: 630px) {
-  .profile__grid {
+  .profile {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 3fr;
