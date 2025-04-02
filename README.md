@@ -7,3 +7,5 @@ Utilizando HTML y CSS se da forma a la estructura y diseño de la página.
 Con elementos como "form" y "button" se ha logrado manipular y editar el contenido con programacion en JavaScript.
 
 git@github.com:Rodoxpana/web_project_around.git
+
+![Image](https://github.com/user-attachments/assets/b18f2760-566e-4af3-a589-21aa302da584)
