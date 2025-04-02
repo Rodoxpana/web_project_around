@@ -39,7 +39,6 @@
           <form class="popup__container">
             <button class="popup__close-button" type="button">🞩</button>
             <h1 class="popup__title">Editar perfil</h1>
-            <!-- <label class="popup__name" for="Nombre">Nombre</label> -->
             <input
               type="text"
               class="popup__input"
@@ -47,7 +46,6 @@
               id="inputname"
               placeholder="Nombre"
             />
-            <!-- <label class="popup__about" for="Acerca de mí">Acerca de mí</label> -->
             <input
               type="text"
               class="popup__input"
@@ -58,81 +56,61 @@
             <button class="popup__save">Guardar</button>
           </form>
         </div>
+        <!-- FASE II -->
+        <div class="popup__image">
+          <div class="popup__image-container">
+            <button class="popup__close-image" type="button">🞩</button>
+            <img
+              class="popup__show-image"
+              src=""
+              alt="Se muestra recuadro imagen"
+            />
+            <p class="popup__caption">Valle De Yosemite</p>
+          </div>
+        </div>
+        <div class="add">
+          <form class="add__container">
+            <button class="add__close-button" type="button">🞩</button>
+            <h2 class="add__title">Nuevo lugar</h2>
+            <input
+              type="text"
+              class="add__input"
+              name="inputtitle"
+              id="inputtitle"
+              placeholder="Título"
+            />
+            <input
+              type="text"
+              class="add__input"
+              name="inputlink"
+              id="inputlink"
+              placeholder="Enlace a la imagen"
+            />
+            <button class="add__save">Agregar</button>
+          </form>
+        </div>
+        <!-- GRID TEMPLATE-->
         <section class="grid">
-          <div class="grid__item">
-            <img
-              src="./images/valleDeYosemite.jpg"
-              alt="Valle De Yosemite"
-              class="grid__image"
-            />
-            <div class="grid__caption-arrange">
-              <p class="grid__caption">Valle De Yosemite</p>
-              <button class="grid__likebutton">
-                <img src="./images/heartVector.png" alt="heart button" />
-              </button>
+          <template id="template">
+            <div class="grid__item">
+              <img
+                class="grid__trash"
+                src="./images/Trash.png"
+                alt="trash button"
+              />
+              <img
+                class="grid__image"
+                src="./images/valleDeYosemite.jpg"
+                alt="Paisaje"
+              />
+              <div class="grid__caption-arrange">
+                <p class="grid__caption">Valle De Yosemite</p>
+                <button class="grid__like">
+                  <!-- <img src="./images/heartVector.png" alt="heart button" /> -->
+                </button>
+              </div>
             </div>
-          </div>
-          <div class="grid__item">
-            <img
-              src="./images/lagoLouise.png"
-              alt="Lago Louise"
-              class="grid__image"
-            />
-            <div class="grid__caption-arrange">
-              <p class="grid__caption">Lago Louise</p>
-              <button class="grid__likebutton">
-                <img src="./images/heartVector.png" alt="heart button" />
-              </button>
-            </div>
-          </div>
-          <div class="grid__item">
-            <img
-              src="./images/montañasCalvas.png"
-              alt="Montañas Calvas"
-              class="grid__image"
-            />
-            <div class="grid__caption-arrange">
-              <p class="grid__caption">Montañas Calvas</p>
-              <button class="grid__likebutton">
-                <img src="./images/heartVector.png" alt="heart button" />
-              </button>
-            </div>
-          </div>
-          <div class="grid__item">
-            <img src="./images/latemar.png" alt="Latemar" class="grid__image" />
-            <div class="grid__caption-arrange">
-              <p class="grid__caption">Latemar</p>
-              <button class="grid__likebutton">
-                <img src="./images/heartVector.png" alt="heart button" />
-              </button>
-            </div>
-          </div>
-          <div class="grid__item">
-            <img
-              src="./images/vanoisNationalP.png"
-              alt="Vanois National"
-              class="grid__image"
-            />
-            <div class="grid__caption-arrange">
-              <p class="grid__caption">Vanois National Park</p>
-              <button class="grid__likebutton">
-                <img src="./images/heartVector.png" alt="heart button" />
-              </button>
-            </div>
-          </div>
-          <div class="grid__item">
-            <img
-              src="./images/lagoDiBraies.png"
-              alt="Lago di Braies"
-              class="grid__image"
-            />
-            <div class="grid__caption-arrange">
-              <p class="grid__caption">Lago di Braies</p>
-              <button class="grid__likebutton">
-                <img src="./images/heartVector.png" alt="heart button" />
-              </button>
-            </div>
-          </div>
+          </template>
         </section>
       </main>
       <footer class="footer">

@@ -40,7 +40,7 @@
   margin: 16px 0;
 }
 
-.profile__button {
+.profile__edit-button {
   grid-area: button;
   width: 24px;
   height: 24px;
@@ -105,7 +105,7 @@
     font-size: 16px;
   }
 
-  .profile__button {
+  .profile__edit-button {
     grid-area: button;
     width: 20px;
     height: 20px;
@@ -165,7 +165,7 @@
     margin: 14px 0 0;
   }
 
-  .profile__button {
+  .profile__edit-button {
     /* align-self: flex-end; */
     width: 18px;
     height: 18px;

@@ -8,6 +8,7 @@
 }
 
 .grid__item {
+  position: relative;
   max-width: 282px;
   max-height: 361px;
   background-color: #ffffff;
@@ -21,6 +22,7 @@
 
 .grid__image {
   max-width: 282px;
+  height: 282px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -39,12 +41,34 @@
   overflow: hidden;
 }
 
-.grid__likebutton {
+.grid__like {
   width: 21px;
   height: 19px;
   border: none;
   background-color: #ffffff;
   align-self: center;
+  background: url(../images/heartVector.png) center no-repeat;
+}
+
+.grid__like:hover {
+  opacity: 0.5;
+}
+
+.grid__like-active {
+  background: url(../images/Union.png) center no-repeat;
+}
+
+.grid__trash {
+  width: 19px;
+  height: 19px;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.grid__trash:hover {
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 630px) and (max-width: 1024px) {
