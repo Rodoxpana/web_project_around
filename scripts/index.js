@@ -1,8 +1,10 @@
+import { resetValidation } from "./validate.js";
+
 const popUp = document.querySelector(".popup");
 const editButton = document.querySelector(".profile__edit-button");
-const closeEdit = document.querySelector(".popup__close-button");
-const inputName = document.querySelector("#inputname");
-const inputAbout = document.querySelector("#inputabout");
+const closeEdit = document.querySelector(".popup__close-edit");
+const inputName = document.querySelector("#input-name");
+const inputAbout = document.querySelector("#input-about");
 const profileName = document.querySelector(".profile__name");
 const profileAbout = document.querySelector(".profile__about");
 const popUpSave = document.querySelector(".popup__save");
@@ -23,12 +25,12 @@ popUpSave.addEventListener("click", (e) => {
 
 const gridCard = document.querySelector(".grid__item");
 const plusButton = document.querySelector(".profile__plus-button");
-const add = document.querySelector(".add");
-const closeAdd = document.querySelector(".add__close-button");
-const addSave = document.querySelector(".add__save");
+const add = document.querySelector(".popup__add");
+const closeAdd = document.querySelector(".popup__close-add");
+const addSave = document.querySelector(".popup__save-add");
 
-const inputtitle = document.querySelector("#inputtitle");
-const inputlink = document.querySelector("#inputlink");
+const inputtitle = document.querySelector("#input-title");
+const inputlink = document.querySelector("#input-link");
 const image = document.querySelector(".grid__image");
 const caption = document.querySelector(".grid__caption");
 
@@ -41,6 +43,37 @@ closeAdd.addEventListener("click", () => {
 });
 
 const items = document.querySelector(".grid");
+const popUpImg = document.querySelector(".popup__image");
+const popUpShowImg = document.querySelector(".popup__show-image");
+const closeImg = document.querySelector(".popup__close-image");
+
+closeImg.addEventListener("click", () => {
+  popUpImg.classList.remove("popup__image-visible");
+});
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    popUp.classList.remove("popup__visible");
+    add.classList.remove("add__visible");
+    popUpImg.classList.remove("popup__image-visible");
+  } else if (e.key === "Enter") {
+    e.preventDefault();
+  }
+});
+
+document.addEventListener("click", function (e) {
+  if (popUp.classList.contains("popup__visible") && e.target === popUp) {
+    popUp.classList.remove("popup__visible");
+  } else if (add.classList.contains("add__visible") && e.target === add) {
+    add.classList.remove("add__visible");
+  } else if (
+    popUpImg.classList.contains("popup__image-visible") &&
+    e.target === popUpImg
+  ) {
+    popUpImg.classList.remove("popup__image-visible");
+  }
+});
+
 addSave.addEventListener("click", (e) => {
   e.preventDefault();
   const template = document.querySelector("#template").content;
@@ -59,22 +92,14 @@ addSave.addEventListener("click", (e) => {
     likeButton.classList.toggle("grid__like-active");
   });
 
-  const popUpImg = document.querySelector(".popup__image");
-  const popUpShowImg = document.querySelector(".popup__show-image");
   image.addEventListener("click", () => {
     popUpImg.classList.toggle("popup__image-visible");
     popUpShowImg.src = inputlink.value;
   });
 
-  const closeImg = document.querySelector(".popup__close-image");
-  closeImg.addEventListener("click", () => {
-    popUpImg.classList.remove("popup__image-visible");
-  });
-
   items.prepend(newCard);
   add.classList.toggle("add__visible");
 });
-//
 
 const cards = [
   {
@@ -123,14 +148,10 @@ cards.forEach((card) => {
     clon.querySelector(".grid__like").classList.toggle("grid__like-active");
   });
 
-  const popUpImg = document.querySelector(".popup__image");
-  const popUpShowImg = document.querySelector(".popup__show-image");
   clon.querySelector(".grid__image").addEventListener("click", () => {
     popUpImg.classList.toggle("popup__image-visible");
     popUpShowImg.src = card.image;
   });
-  const closeImg = document.querySelector(".popup__close-image");
-  closeImg.addEventListener("click", () => {
-    popUpImg.classList.remove("popup__image-visible");
-  });
 });
+
+resetValidation();
