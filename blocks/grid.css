@@ -10,6 +10,7 @@
 .grid__item {
   position: relative;
   max-width: 282px;
+  min-width: 282px;
   max-height: 361px;
   background-color: #ffffff;
   border-radius: 10px;
@@ -23,6 +24,7 @@
 .grid__image {
   max-width: 282px;
   height: 282px;
+  min-height: 282px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -30,6 +32,7 @@
 .grid__caption-arrange {
   display: flex;
   flex-direction: row;
+
   justify-content: space-between;
   max-width: 260px;
   margin: auto 20px;
